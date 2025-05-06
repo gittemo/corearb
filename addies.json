@@ -1,0 +1,512 @@
+[
+  {
+    "name": "PURR",
+    "szDecimals": 0,
+    "weiDecimals": 5,
+    "index": 1,
+    "tokenId": "0xc1fb593aeffbeb02f85e0308e9956a90",
+    "isCanonical": true,
+    "evmContract": {
+      "address": "0x9b498c3c8a0b8cd8ba1d9851d40d186f1872b44e",
+      "evm_extra_wei_decimals": 13
+    },
+    "fullName": null,
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "PURR/USDC"
+  },
+  {
+    "name": "HFUN",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 2,
+    "tokenId": "0xbaf265ef389da684513d98d68edf4eae",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xa320d9f65ec992eff38622c63627856382db726c",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": null,
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@1"
+  },
+  {
+    "name": "JEFF",
+    "szDecimals": 0,
+    "weiDecimals": 5,
+    "index": 5,
+    "tokenId": "0xfcf28885456bf7e7cbe5b7a25407c5bc",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x52e444545fbe9e5972a7a371299522f7871aec1f",
+      "evm_extra_wei_decimals": 13
+    },
+    "fullName": null,
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@4"
+  },
+  {
+    "name": "SIX",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 6,
+    "tokenId": "0x50a9391b4a40caffbe8b16303b95a0c1",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x41de34fc45a770ebcd50200be93f080b4b05151f",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": null,
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@5"
+  },
+  {
+    "name": "CZ",
+    "szDecimals": 2,
+    "weiDecimals": 7,
+    "index": 17,
+    "tokenId": "0x3b5ff6cb91f71032578b53960090adfb",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xfdd1834677a50e61fe13e6bce49c8144e333fcbe",
+      "evm_extra_wei_decimals": 11
+    },
+    "fullName": null,
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@16"
+  },
+  {
+    "name": "VEGAS",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 25,
+    "tokenId": "0xb693d596cd02f5f38e532e647bb43b69",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xb09158c8297acee00b900dc1f8715df46b7246a6",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": null,
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@35"
+  },
+  {
+    "name": "CAT",
+    "szDecimals": 2,
+    "weiDecimals": 7,
+    "index": 48,
+    "tokenId": "0x7631702302e6c7fbf69d369e0bcf45d6",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x04d02cb2e963b4490ee02b1925223d04f9d83fc6",
+      "evm_extra_wei_decimals": 11
+    },
+    "fullName": null,
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@126"
+  },
+  {
+    "name": "OMNIX",
+    "szDecimals": 1,
+    "weiDecimals": 6,
+    "index": 53,
+    "tokenId": "0x216a1428334ac9e908e76a02a1812416",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x45ec8f63fe934c0213476cfb5870835e61dd11fa",
+      "evm_extra_wei_decimals": 12
+    },
+    "fullName": null,
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@74"
+  },
+  {
+    "name": "CATBAL",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 76,
+    "tokenId": "0x38348c17e1a18559bbda232d22007695",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x11735dbd0b97cfa7accf47d005673ba185f7fd49",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "Password? Paw paw time.",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@59"
+  },
+  {
+    "name": "LAUNCH",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 95,
+    "tokenId": "0xa82aa458b2c146e97733d0c05374aa0e",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x4533c3002660117a56fa44ed3c4bf4b6a8e0b0a2",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "Hyperlauncher",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@122"
+  },
+  {
+    "name": "WOW",
+    "szDecimals": 0,
+    "weiDecimals": 5,
+    "index": 98,
+    "tokenId": "0xc81b9a04884f4a8107f734c4d88f811a",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x93f12d8931e97cf41d5934bb5d302aa0e2623305",
+      "evm_extra_wei_decimals": 13
+    },
+    "fullName": null,
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@109"
+  },
+  {
+    "name": "SPH",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 118,
+    "tokenId": "0xaced5d1ad2c5ce7b7c789abfb7955b27",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xd2fe47eed2d52725d9e3ae6df45593837f57c1a2",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "SPH800",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@78"
+  },
+  {
+    "name": "PIP",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 127,
+    "tokenId": "0xe85f43e1f91e3c8cdf3acbd7e0855b8e",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x1bee6762f0b522c606dc2ffb106c0bb391b2e309",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "a tiny pip in a big hypurrrliquid puddle 🌊",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@85"
+  },
+  {
+    "name": "LQNA",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 129,
+    "tokenId": "0x0dd6980f71e51e6f218a9b7d53c837f6",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xa94676f34f6a2764c7fde5611b53834b71f228ec",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "The Queen of Hyperliquid.",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@86"
+  },
+  {
+    "name": "SYLVI",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 131,
+    "tokenId": "0x21c7f844092376ba85aa3875180e194b",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x769a227178f37da50371200eb93aa71a214ca874",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "Sylvanian Families",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@89"
+  },
+  {
+    "name": "NIGGO",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 142,
+    "tokenId": "0x2e73765c9718421ca426a2bb2d7243b0",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xc1631903081b19f0b7117f34192c7db48960989c",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "Finding Niggo in the vast hyperliquid ocean",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@101"
+  },
+  {
+    "name": "GENESY",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 156,
+    "tokenId": "0xc8469678541042226507fd880a105523",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x6f7e96c0267cd22fe04346af21f8c6ff54372939",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "First P2E on Hyperliquid, optimize and earn.",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@118"
+  },
+  {
+    "name": "SHEEP",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 159,
+    "tokenId": "0xd99348c20362c8513e2808ac24adc777",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x27542a8d608ee16322fae739c46e6e6ae6d2828a",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "The blue sheep on HyperLiquiq  Don't Miss It",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@121"
+  },
+  {
+    "name": "FARM",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 161,
+    "tokenId": "0x11c83b5cfeb6419a74a85a5aaba0511d",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x3880c8cf09a5454dc9cb851b08c785e55504f63c",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "World's 1st GenAI AI Agent Game",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@123"
+  },
+  {
+    "name": "DEPIN",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 174,
+    "tokenId": "0x934a7e00c1b047c2d27967663f58befe",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xa085221178b4cb7e40415bca547e76e223e6d137",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "DEPIN DEGN DEVICE OFFICIAL TOKEN",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@128"
+  },
+  {
+    "name": "BEATS",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 176,
+    "tokenId": "0x74051103aba9e726e0ad877ed3e49c38",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x710a6c044d23949ba3b98ce13d762503c9708ba3",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "BEATS AI - the agentic music creation lab",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@130"
+  },
+  {
+    "name": "LIQD",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 178,
+    "tokenId": "0xa043053570d42d6f553896820dfd42b6",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x1ecd15865d7f8019d546f76d095d9c93cc34edfa",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "LiquidLaunch",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@132"
+  },
+  {
+    "name": "SENT",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 186,
+    "tokenId": "0x2ceb1907ce5c0c98b86e733d15aea34b",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xed912f61368be50835ad7696f67d106b0cd08fe2",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "https://x.com/Sentiient_AI",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@135"
+  },
+  {
+    "name": "FLY",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 187,
+    "tokenId": "0x55db85bd0938b111d0f78a98173fd99a",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x3f244819a8359145a8e7cf0272955e4918a50627",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "HyperFly",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@137"
+  },
+  {
+    "name": "HWTR",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 189,
+    "tokenId": "0xad426cf28a66dc0c8f3b931018ba9845",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x5804bf271d9e691611eea1267b24c1f3d0723639",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "First AI investment DAO on Hyperliquid",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@140"
+  },
+  {
+    "name": "UBTC",
+    "szDecimals": 5,
+    "weiDecimals": 10,
+    "index": 197,
+    "tokenId": "0x8f254b963e8468305d409b33aa137c67",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x9fdbda0a5e284c32744d2f17ee5c74b284993463",
+      "evm_extra_wei_decimals": -2
+    },
+    "fullName": "Unit Bitcoin",
+    "deployerTradingFeeShare": "1.0",
+    "universeName": "@142"
+  },
+  {
+    "name": "VORTX",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 204,
+    "tokenId": "0xce98fc675b7de6fa9776d32e00c56717",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xc12b4dd5268322ddbe3d6f65ebb1ce37a9951315",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "Interact with HL on Discord, Twitter and web UI",
+    "deployerTradingFeeShare": "1.0",
+    "universeName": "@145"
+  },
+  {
+    "name": "UETH",
+    "szDecimals": 4,
+    "weiDecimals": 9,
+    "index": 221,
+    "tokenId": "0xe1edd30daaf5caac3fe63569e24748da",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xbe6727b535545c67d5caa73dea54865b92cf7907",
+      "evm_extra_wei_decimals": 9
+    },
+    "fullName": "Unit Ethereum",
+    "deployerTradingFeeShare": "1.0",
+    "universeName": "@151"
+  },
+  {
+    "name": "BUDDY",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 222,
+    "tokenId": "0x84ecb2340931f6b153ff10bcfafb6726",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x47bb061c0204af921f43dc73c7d7768d2672ddee",
+      "evm_extra_wei_decimals": -2
+    },
+    "fullName": "alright buddy",
+    "deployerTradingFeeShare": "1.0",
+    "universeName": "@160"
+  },
+  {
+    "name": "USDE",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 235,
+    "tokenId": "0x2e6d84f2d7ca82e6581e03523e4389f7",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "USDe",
+    "deployerTradingFeeShare": "0.0",
+    "universeName": "@150"
+  },
+  {
+    "name": "USDXL",
+    "szDecimals": 2,
+    "weiDecimals": 7,
+    "index": 239,
+    "tokenId": "0xf448c3cad413cdf0feb1746d7b057967",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xca79db4b49f608ef54a5cb813fbed3a6387bc645",
+      "evm_extra_wei_decimals": 11
+    },
+    "fullName": "Last USD",
+    "deployerTradingFeeShare": "1.0",
+    "universeName": "@152"
+  },
+  {
+    "name": "FEUSD",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 241,
+    "tokenId": "0x88102bea0bbad5f301f6e9e4dacdf979",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0x02c6a2fa58cc01a18b8d9e00ea48d65e4df26c70",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "Felix USD",
+    "deployerTradingFeeShare": "1.0",
+    "universeName": "@153"
+  },
+  {
+    "name": "QUANT",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 251,
+    "tokenId": "0x68c563790c975869358031d0e42e49a1",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xe443d488a8988262f35b921b36f1c8f5b2fa38e1",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "HypurrQuant",
+    "deployerTradingFeeShare": "1.0",
+    "universeName": "@155"
+  },
+  {
+    "name": "RAT",
+    "szDecimals": 2,
+    "weiDecimals": 8,
+    "index": 253,
+    "tokenId": "0xd7f58d3c744fbc0100f7d86f3e283d11",
+    "isCanonical": false,
+    "evmContract": {
+      "address": "0xfdc42f844f3aa19f8fc0b2d67d3276cf1efdc4ca",
+      "evm_extra_wei_decimals": 10
+    },
+    "fullName": "Rat Race Combat: Skill, Gems, Crypto. 🐀💎",
+    "deployerTradingFeeShare": "1.0",
+    "universeName": "@157"
+  }
+]
