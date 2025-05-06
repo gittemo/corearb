@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { info } from './hl.js';
+import { info } from './api.js';
 
 async function main() {
   const data = await info("spotMeta");
@@ -9,7 +9,7 @@ async function main() {
     .filter(token => token.evmContract)
     .map(token => {
       const universe = data.universe.find(universe => universe.tokens[0] === token.index);
-      return { ...token, universeName: universe.name };
+      return { ...token, universeName: universe.name, address: token.evmContract.address };
     });
 
   // Convert tokens array into an object where each key is the token's name

@@ -1,4 +1,5 @@
 import fs from 'fs'
+import { getPools } from './api';
 
 const tokens = JSON.parse(fs.readFileSync('tokens.json', 'utf-8'));
 
@@ -7,6 +8,8 @@ const stables = ["0xca79db4b49f608ef54a5cb813fbed3a6387bc645", "0x02c6a2fa58cc01
 
 // uBTC and uETH
 const unit = ["0xbe6727b535545c67d5caa73dea54865b92cf7907", "0x9fdbda0a5e284c32744d2f17ee5c74b284993463"]
+
+const whype = "0x5555555555555555555555555555555555555555"
 
 async function find() {
   for (const token of Object.values(tokens)) {
@@ -20,13 +23,7 @@ async function find() {
     //   continue;
     // }
 
-    const response = await fetch(`https://api.dexscreener.com/token-pairs/v1/hyperevm/${address}`)
-    const body = await response.json()
-    if (!body || !body.length) {
-      continue; // no pools found
-    }
-
-    const pools = body.filter(pool => pool.liquidity && pool.liquidity.usd > 10000);
+    const pools = await getPools(address)
 
     for (const pool of pools) {
       const liq = `${Math.floor(pool.liquidity.usd / 1000)}k`;
