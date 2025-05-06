@@ -1,8 +1,6 @@
 import fs from 'fs'
-import { info } from './hl.js'
 
 const tokens = JSON.parse(fs.readFileSync('tokens.json', 'utf-8'));
-const ctx = await info("spotMetaAndAssetCtxs")
 
 // FEUSD & USDXL
 const stables = ["0xca79db4b49f608ef54a5cb813fbed3a6387bc645", "0x02c6a2fa58cc01a18b8d9e00ea48d65e4df26c70"];
