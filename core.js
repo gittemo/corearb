@@ -1,8 +1,8 @@
-import fs from 'fs'
-import { info } from './hl.js'
+import fs from 'fs';
+import { info } from './hl.js';
 
 async function main() {
-    const data = await info("spotMeta")
+    const data = await info("spotMeta");
 
     // Enrich tokens with universeIndex
     const tokens = data.tokens
@@ -12,7 +12,13 @@ async function main() {
             return { ...token, universeName: universe.name };
         });
 
-    fs.writeFileSync('tokens.json', JSON.stringify(tokens, null, 2));
+    // Convert tokens array into an object where each key is the token's name
+    const tokensByName = tokens.reduce((acc, token) => {
+        acc[token.name] = token;
+        return acc;
+    }, {});
+
+    fs.writeFileSync('tokens.json', JSON.stringify(tokensByName, null, 2));
 }
 
-await main()
+await main();
