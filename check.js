@@ -37,7 +37,7 @@ const t2 = "UBTC"
 
 const base = getL1Price(tokens[t1])
 const quote = getL1Price(tokens[t2])
-prices.l1 = (base/quote).toFixed(10)
+prices.L1 = (base/quote).toFixed(10)
 
 await check(t1, t2)
 console.log(`\n${t1}/${t2}`)
