@@ -4,7 +4,7 @@ import { get } from 'http';
 
 const tokens = JSON.parse(fs.readFileSync('tokens.json', 'utf-8'));
 const ctx = await info("spotMetaAndAssetCtxs")
-const prices = []
+const prices = {}
 
 function getL1Price(t1Un, t2Un) {
   const token1Ctx = ctx[1].find(data => data.coin === t1Un);
@@ -29,6 +29,7 @@ async function check(token1, token2, middleToken) {
           prices[`${pool.dexId}/${liq}/${pool2.dexId}/${liq2}/${pool.token2}`] = pool.priceNative / pool2.priceNative;
         }
       }
+      prices[`${pool.dexId}/${liq}/${pool.token2}`] = pool.priceNative;
     }
   }
 }
@@ -42,20 +43,11 @@ const middleToken = { name: "WHYPE", address: "0x5555555555555555555555555555555
 //   console.log(pool.token2, pool.baseToken.symbol === middleToken.name ? pool.quoteToken.address : pool.baseToken.address)
 //   console.log(pool.pairAddress)
 // }
-
-prices.append({
-  path: [token1.name, "L1", "USDC", "L1", token2.name],
-  price: getL1Price(token1.universeName, token2.universeName),
-})
+prices.L1 = getL1Price(token1.universeName, token2.universeName);
 
 await check(token1, token2, middleToken);
 console.log(`\n${token1.name}/${token2.name}`);
 for (const [key, value] of Object.entries(prices)) {
   const price = parseFloat(value).toFixed(10);
   console.log(`${price} ${key}`);
-}
-
-
-function keyFmt(n1, n2, key) {
-  return `${n1} ==${key}==> ${n2}`;
 }
