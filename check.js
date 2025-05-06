@@ -41,4 +41,7 @@ prices.l1 = (base/quote).toFixed(10)
 
 await check(t1, t2)
 console.log(`\n${t1}/${t2}`)
-console.log(prices)
+for (const [key, value] of Object.entries(prices)) {
+  const price = parseFloat(value).toFixed(10)
+  console.log(`${price} ${key}`)
+}
