@@ -12,32 +12,33 @@ function getL1Price(token) {
 }
 
 async function check(base, quote) {
-    const address = tokens[quote].evmContract.address;
+  const address = tokens[quote].evmContract.address;
 
-    const response = await fetch(`https://api.dexscreener.com/token-pairs/v1/hyperevm/${address}`)
-    const body = await response.json()
-    if (!body || !body.length) {
-      return; // no pools found
+  const response = await fetch(`https://api.dexscreener.com/token-pairs/v1/hyperevm/${address}`)
+  const body = await response.json()
+  if (!body || !body.length) {
+    return; // no pools found
+  }
+
+  const pools = body.filter(pool => pool.liquidity && pool.liquidity.usd > 5000);
+
+  for (const pool of pools) {
+    if (pool.baseToken.symbol !== base) {
+      continue;
     }
 
-    const pools = body.filter(pool => pool.liquidity && pool.liquidity.usd > 5000);
-
-    for (const pool of pools) {
-      if (pool.baseToken.symbol !== base) {
-        continue;
-      }
-
-      const liq = `${Math.floor(pool.liquidity.usd / 1000)}k`;
-      prices[`${pool.dexId}/${liq}`] = pool.priceNative
-    }
+    const liq = `${Math.floor(pool.liquidity.usd / 1000)}k`;
+    prices[`${pool.dexId}/${liq}`] = pool.priceNative
+  }
 }
 
-const t1 = "BUDDY"
+const t1 = "UETH"
 const t2 = "UBTC"
+const m = "HYPE"
 
 const base = getL1Price(tokens[t1])
 const quote = getL1Price(tokens[t2])
-prices.L1 = (base/quote).toFixed(10)
+prices.L1 = (base / quote).toFixed(10)
 
 await check(t1, t2)
 console.log(`\n${t1}/${t2}`)
