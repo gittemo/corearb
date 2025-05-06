@@ -1,25 +1,18 @@
-const fs = require('fs');
+import fs from 'fs'
+import { info } from './hl.js'
 
-(async () => {
-    const response = await fetch("https://api.hyperliquid.xyz/info", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "spotMeta" })
-    });
-
-    const data = await response.json();
+async function main() {
+    const data = await info("spotMeta")
 
     // Enrich tokens with universeIndex
     const tokens = data.tokens
         .filter(token => token.evmContract)
         .map(token => {
             const universe = data.universe.find(universe => universe.tokens[0] === token.index);
-            if (!universe) {
-                console.log(token);
-                return token;
-            }
             return { ...token, universeName: universe.name };
         });
 
-    fs.writeFileSync('addies.json', JSON.stringify(tokens, null, 2));
-})();
+    fs.writeFileSync('tokens.json', JSON.stringify(tokens, null, 2));
+}
+
+await main()

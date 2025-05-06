@@ -1,22 +1,24 @@
-const fs = require('fs');
+import fs from 'fs'
+import { info } from './hl.js'
 
-(async () => {
-  const tokens = JSON.parse(fs.readFileSync('addies.json', 'utf-8'));
+// FEUSD & USDXL
+const stables = ["0xca79db4b49f608ef54a5cb813fbed3a6387bc645", "0x02c6a2fa58cc01a18b8d9e00ea48d65e4df26c70"];
+// uBTC and uETH
+const unit = ["0xbe6727b535545c67d5caa73dea54865b92cf7907", "0x9fdbda0a5e284c32744d2f17ee5c74b284993463"]
 
-  const response = await fetch("https://api.hyperliquid.xyz/info", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ type: "spotMetaAndAssetCtxs" })
-  });
+async function check() {
+  const tokens = JSON.parse(fs.readFileSync('tokens.json', 'utf-8'));
 
-  const ctx = await response.json();
+  const ctx = await info("spotMetaAndAssetCtxs")
 
   for (const token of tokens) {
     const address = token.evmContract.address;
 
-    // Skip FEUSD & USDXL
-    const stables = ["0xca79db4b49f608ef54a5cb813fbed3a6387bc645", "0x02c6a2fa58cc01a18b8d9e00ea48d65e4df26c70"];
     if (stables.includes(address)) {
+      continue;
+    }
+
+    if (!unit.includes(address)) {
       continue;
     }
 
@@ -30,19 +32,18 @@ const fs = require('fs');
 
     const coreData = ctx[1].find(data => data.coin === token.universeName);
     const markPx = coreData.markPx;
-    console.log(token.name, address)
-    console.log(`    mark: ${coreData.markPx}, mid: ${coreData.midPx}`);
+    console.log(`${token.name} Spot ${coreData.markPx}`)
     for (const pool of pools) {
-      if (pool.baseToken.address.toLowerCase() !== address) {
-        continue;
-      }
+      // console.log(pool)
+      const liq = `${Math.floor(pool.liquidity.usd / 1000)}k`;
+      console.log(`${pool.baseToken.symbol}-${pool.quoteToken.symbol} ${liq} `)
+      // if (pool.baseToken.address.toLowerCase() !== address) {
+      //   continue;
+      // }
       const price = pool.baseToken.address.toLowerCase() !== address ? 1 / pool.priceNative : pool.priceUsd;
-      const liq = pool.liquidity.usd;
-      console.log(`    ${pool.dexId}: Price: ${price}, Liq: ${liq}`);
-      if (price > markPx * 1.04 || price < markPx * 0.96) {
-        // console.log(`    ${pool.dexId}: ${price}, Core: ${markPx}`);
-        console.log(pool.url)
-      }
+      // console.log(`    ${pool.dexId}: Price: ${price}, Liq: ${liq}`);
     }
   }
-})();
+}
+
+await check()
