@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { info } from './api.js';
+import { info } from './api.ts';
 
 async function main() {
   const data = await info("spotMeta");

@@ -4,7 +4,20 @@ import { liqFmt } from './fmt.ts';
 
 const tokens = JSON.parse(fs.readFileSync('tokens.json', 'utf-8'));
 const ctx = await info("spotMetaAndAssetCtxs")
-const opps = []
+
+type Hop = {
+  dex: string;
+  liq: string;
+  token2: string;
+  priceNative: number;
+}
+
+type Opportunity = {
+  route: Hop[];
+  price: number;
+}
+
+const opps: Opportunity[] = []
 
 function getL1Price(t1Un, t2Un) {
   const token1Ctx = ctx[1].find(data => data.coin === t1Un);
@@ -19,7 +32,7 @@ async function check(token1, token2, middleToken) {
   for (const pool of pools1) {
     const liq = liqFmt(pool.liquidity.usd);
     if (pool.token2 === token2.name) {
-      opps.push({ route: `${pool.dexId}/${liq}/${pool.token2}`, price: pool.priceNative });
+      opps.push({ route: [{ dex: pool.dexId, liq, token2: pool.token2, priceNative: pool.priceNative }], price: pool.priceNative });
     } else if (pool.token2 === middleToken.name) {
       for (const pool2 of pools2) {
         if (pool2.token2 !== token2.name) continue;
