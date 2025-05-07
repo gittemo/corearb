@@ -1,4 +1,4 @@
-export function liqFmt(liq) {
+export function liqFmt(liq: number) {
   return `${Math.floor(liq / 1000)}k`
 }
 

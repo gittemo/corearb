@@ -1,6 +1,6 @@
 import fs from 'fs'
-import { info, getPools } from './api.js'
-import { liqFmt } from './fmt.js';
+import { info, getPools } from './api.ts'
+import { liqFmt } from './fmt.ts';
 
 const tokens = JSON.parse(fs.readFileSync('tokens.json', 'utf-8'));
 const ctx = await info("spotMetaAndAssetCtxs")
