@@ -5,7 +5,7 @@ export function liqFmt(liq: number) {
 export function routeFmt(route) {
   let str = ""
   for (const hop of route) {
-    str += `${str ? "" : hop.token1} =${hop.dex}=${liqFmt(hop.liq)}=> ${round(hop.price, 7)} ${hop.token2} `
+    str += `${str ? "" : hop.token1} =${liqFmt(hop.liq)}=> ${round(hop.price, 7)} ${hop.token2} `
   }
   return str
 }

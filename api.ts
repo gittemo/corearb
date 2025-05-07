@@ -15,8 +15,9 @@ export async function getPools(token) {
     return; // no pools found
   }
   return body.map(pool => {
-    const token2 = pool.baseToken.symbol === name ? pool.quoteToken.symbol : pool.baseToken.symbol;
+    const token2 = pool.baseToken.symbol === name ? pool.quoteToken : pool.baseToken;
     const priceNative = pool.baseToken.symbol === name ? pool.priceNative : 1 / pool.priceNative;
-    return {...pool, name, token2, priceNative};
+    const address = token2.address.toLowerCase()
+    return {...pool, name, token2: {...token2, address}, priceNative};
   }).filter(pool => pool.liquidity.usd > 10000);
 }
